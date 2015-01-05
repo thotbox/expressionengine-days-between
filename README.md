@@ -15,17 +15,41 @@ Use {exp:days_between:dates} to calculate number of days between dates.
 
 ### Parameters
 
-from_date="" - unix timestamp or valid date/time format
-from_day="" - if passing day as individual argument (not used in conjunction with from_date)
-from_month="" - if passing month as individual argument (not used in conjunction with from_date)
-from_year="" - if passing year as individual argument (not used in conjunction with from_date)
+```from_date=""```
 
-to_date="" - unix timestamp or valid date/time format
-to_day="" - if passing day as individual argument (not used in conjunction with to_date)
-to_month="" - if passing month as individual argument (not used in conjunction with to_date)
-to_year="" - if passing year as individual argument (not used in conjunction with to_date)
+Unix timestamp or valid date/time format.
 
-invert="" - inverts negative numbers when using future dates
+```from_day=""```
+
+If passing day as individual argument (not used in conjunction with from_date).
+
+```from_month=""```
+
+If passing month as individual argument (not used in conjunction with from_date).
+
+```from_year=""```
+
+If passing year as individual argument (not used in conjunction with from_date).
+
+```to_date=""```
+
+Unix timestamp or valid date/time format
+
+```to_day=""```
+
+If passing day as individual argument (not used in conjunction with to_date).
+
+```to_month=""```
+
+If passing month as individual argument (not used in conjunction with to_date).
+
+```to_year=""```
+
+If passing year as individual argument (not used in conjunction with to_date).
+
+```invert=""```
+
+Inverts negative numbers when using future dates.
 
 #### Examples
 
