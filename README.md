@@ -75,35 +75,35 @@ Inverts negative numbers when using future dates.
 {exp:days_between:today from_date="1420088400"}
 ```
 
-This would return the number of days between January 1, 2015 (epoch timestamp 1420088400) and today.
+Returns the number of days between January 1, 2015 (epoch timestamp 1420088400) and today.
 
 ```
 {exp:days_between:today from_date="January 1, 2015"}
 ```
 
-This would also return the number of days between January 1, 2015 and today.
+Also returns the number of days between January 1, 2015 and today.
 
 
 ```
 {exp:days_between:today from_year="2015" from_month="1" from_day="1"}
 ```
 
-This would also return the number of days between January 1, 2015 and today.
+Also returns the number of days between January 1, 2015 and today.
 
 ```
 {exp:days_between:dates from_date="January 1, 2015" to_date="1/4/2015"}
 ```
 
-This would return 3.
+Returns 3.
 
 ```
 {exp:days_between:dates from_date="yesterday" to_date="tomorrow"}
 ```
 
-This would return 2.
+Returns 2.
 
 ```
 {exp:days_between:dates from_year="2015" from_month="1" from_day="1" to_year="2015" to_month="1" to_day="2"}
 ```
 
-This would return 1.
+Returns 1.
