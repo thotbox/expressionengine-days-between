@@ -1,7 +1,7 @@
 
 ## Description
 
-ExpressionEngine plugin which calculates number of days between dates.
+ExpressionEngine plugin which calculates the number of days between dates.
 
 ### Installation
 

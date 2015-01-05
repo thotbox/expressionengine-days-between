@@ -3,7 +3,7 @@
 $plugin_info = array(
     'pi_name' => 'Thotbox: Days Between',
     'pi_author' =>'Shane Woodward',
-    'pi_description' => 'Calculates number of days between dates.',
+    'pi_description' => 'Calculates the number of days between dates.',
     'pi_version' =>'1.0',
     'pi_usage' => days_between::usage()
 );
