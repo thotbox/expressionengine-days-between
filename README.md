@@ -9,9 +9,17 @@ Copy the "days_between" folder to your /system/expressionengine/third_party fold
 
 ### Usage
 
-Use {exp:days_between:today} to calculate number of days from today.
+```
+{exp:days_between:today}
+```
 
-Use {exp:days_between:dates} to calculate number of days between dates.
+Calculates the number of days between a date and today.
+
+```
+{exp:days_between:dates}
+```
+
+Calculates the number of days between two dates.
 
 ### Parameters
 
