@@ -20,6 +20,17 @@ class days_between {
         $from_month = $this->EE->TMPL->fetch_param('from_month');
         $from_day = $this->EE->TMPL->fetch_param('from_day');
 
+        $from_date = $this->EE->TMPL->fetch_param('from_date');
+
+        if (!empty($from_date)) {
+            if (!is_numeric($from_date) && (int)$from_date == $from_date) {
+                $from_date = strtotime($from_date); 
+            }
+            $from_year = date('Y', $from_date);
+            $from_month = date('m', $from_date);
+            $from_day = date('d', $from_date);
+        }
+
         $current_year = date('Y');
         $current_month = date('m');
         $current_day = date('d');
@@ -53,6 +64,28 @@ class days_between {
         $to_month = $this->EE->TMPL->fetch_param('to_month');
         $to_day = $this->EE->TMPL->fetch_param('to_day');
 
+        $from_date = $this->EE->TMPL->fetch_param('from_date');
+
+        if (!empty($from_date)) {
+            if (!is_numeric($from_date) && (int)$from_date == $from_date) {
+                $from_date = strtotime($from_date); 
+            }
+            $from_year = date('Y', $from_date);
+            $from_month = date('m', $from_date);
+            $from_day = date('d', $from_date);
+        }
+        
+        $to_date = $this->EE->TMPL->fetch_param('to_date');
+
+        if (!empty($to_date)) {
+            if (!is_numeric($to_date) && (int)$to_date == $to_date) {
+                $to_date = strtotime($to_date); 
+            }
+            $to_year = date('Y', $to_date);
+            $to_month = date('m', $to_date);
+            $to_day = date('d', $to_date);
+        }
+
         $invert = $this->EE->TMPL->fetch_param('invert');
         $invert = strtolower($invert);
 
@@ -71,7 +104,7 @@ class days_between {
     public function usage() {
         ob_start();
     ?>
-        Use {exp:days_between:today from_year="" from_month="" from_day=""} to calculate number of days from today. Use {exp:days_between:dates from_year="" from_month="" from_day="" to_year="" to_month="" to_day=""} to calculate number of days between dates. When using future dates, add invert="yes" to invert negative numbers.
+        Use {exp:days_between:today} to calculate number of days from today. Use {exp:days_between:dates} to calculate number of days between dates.
     <?php
         $text = ob_get_contents();
         ob_end_clean();
