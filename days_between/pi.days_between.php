@@ -4,7 +4,7 @@ $plugin_info = array(
     'pi_name' => 'Thotbox: Days Between',
     'pi_author' =>'Shane Woodward',
     'pi_description' => 'Calculates the number of days between dates.',
-    'pi_version' =>'1.0',
+    'pi_version' =>'1.1',
     'pi_usage' => days_between::usage()
 );
 
@@ -38,15 +38,17 @@ class days_between {
         $invert = $this->EE->TMPL->fetch_param('invert');
         $invert = strtolower($invert);
 
-        $from = gregoriantojd($from_month, $from_day, $from_year); 
-        $current = gregoriantojd($current_month, $current_day, $current_year); 
-        $result = ($current - $from);
+        if (is_numeric($from_month) && is_numeric($from_day) && is_numeric($from_year)) {
+            $from = gregoriantojd($from_month, $from_day, $from_year); 
+            $current = gregoriantojd($current_month, $current_day, $current_year); 
+            $result = ($current - $from);
 
-        if ($invert == 'yes') {
-            $result = ($result * -1);
+            if ($invert == 'yes') {
+                $result = ($result * -1);
+            }
+
+            return $result;
         }
-
-        return $result; 
 
     }
     
@@ -89,15 +91,17 @@ class days_between {
         $invert = $this->EE->TMPL->fetch_param('invert');
         $invert = strtolower($invert);
 
-        $from = gregoriantojd($from_month, $from_day, $from_year); 
-        $to = gregoriantojd($to_month, $to_day, $to_year); 
-        $result = ($to - $from);
+        if (is_numeric($from_month) && is_numeric($from_day) && is_numeric($from_year) && is_numeric($to_month) && is_numeric($to_day) && is_numeric($to_year)) {
+            $from = gregoriantojd($from_month, $from_day, $from_year); 
+            $to = gregoriantojd($to_month, $to_day, $to_year); 
+            $result = ($to - $from);
 
-        if ($invert == 'yes') {
-            $result = ($result * -1);
-        }
+            if ($invert == 'yes') {
+                $result = ($result * -1);
+            }
 
-        return $result; 
+            return $result;
+        } 
 
     }
 
