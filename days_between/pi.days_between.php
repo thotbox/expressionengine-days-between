@@ -105,7 +105,7 @@ class days_between {
 
     }
 
-    public function usage() {
+    public static function usage() {
         ob_start();
     ?>
         Use {exp:days_between:today} to calculate number of days from today. Use {exp:days_between:dates} to calculate number of days between dates.
